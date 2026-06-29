@@ -48,6 +48,7 @@ int db_get_or_create_file_id(const char *filepath) {
 }
 
 void db_insert_edge(int source_id, int target_id) {
+    if (source_id == target_id) return; // Ignore self-includes (name-resolution artifacts).
     sqlite3_bind_int(stmt_insert_edge, 1, source_id);
     sqlite3_bind_int(stmt_insert_edge, 2, target_id);
     sqlite3_step(stmt_insert_edge);

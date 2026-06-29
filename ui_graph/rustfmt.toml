@@ -1,0 +1,8 @@
+tab_spaces = 4
+hard_tabs = false
+newline_style = "Unix"
+max_width = 140
+reorder_imports = true
+reorder_modules = true
+single_line_if_else_max_width = 0
+match_block_trailing_comma = true
